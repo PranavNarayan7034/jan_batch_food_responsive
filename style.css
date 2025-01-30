@@ -12,10 +12,12 @@ body{
 /* --- navbar style ---  */
 nav{
     display: flex;
+    width: 100vw;
     justify-content: space-between;
     align-items: center;
     padding: 0 80px;
     height: 100px;
+    z-index: 10;
 }
 nav img{
     height: 130px;
@@ -79,5 +81,115 @@ nav img{
     }
     .center,.right{
         display: none;
+    }
+}
+
+ /* ---- intro page ---- */
+ .intro{
+    width: 100vw;
+    height: calc(100vh - 100px);
+ }
+ .intro{
+    height: calc( 100vh - 100px);
+    display: flex;
+    margin: 0 50px;
+}
+.one,.two{
+    height: 100%;
+    width: 100%;
+    /* border: 4px solid white; */
+}
+.one{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.one h1{
+    font-size:42px;
+    text-transform: capitalize;
+    font-family: Nunito;
+    font-weight: 800;
+}
+.one h1 span{
+    color: red;
+}
+.two{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.two .img1{
+    position: absolute;
+    z-index: 1;
+}
+.two .img2{
+    position: relative;
+    z-index: 2;
+}
+.one p{
+    font-size: 18px;
+    font-family: Roboto slab;
+    color: rgba(255, 255, 255, 0.627);
+}
+.btn1{
+    background-color: orange;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: Nunito;
+    text-transform: capitalize;
+    border-radius: 0 25px 25px 25px;
+}
+.btn2{
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+.btn2 i{
+    font-size: 40px;
+    background:linear-gradient(to right,
+    orange 0 50% , transparent 50% 100%);
+    padding: 5px;
+    border-radius: 50%;
+}
+.button{
+    display: flex;
+    gap: 20px;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.child img{ 
+    height: 60px;
+    width: 60px;
+}
+.line{
+    width: 3px;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.304);
+}
+
+@media (max-width:1000px) {
+    .one h1{
+        font-size: 35px;
+    }
+}
+@media (max-width:800px) {
+    .one h1{
+        font-size: 30px;
+    }
+}
+@media (max-width:600px) {
+    .one h1{
+        font-size: 25px;
     }
 }
