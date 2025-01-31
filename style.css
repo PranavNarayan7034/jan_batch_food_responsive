@@ -86,13 +86,8 @@ nav img{
 
  /* ---- intro page ---- */
  .intro{
-    width: 100vw;
-    height: calc(100vh - 100px);
- }
- .intro{
-    height: calc( 100vh - 100px);
     display: flex;
-    margin: 0 50px;
+    padding: 30px 50px;
 }
 .one,.two{
     height: 100%;
@@ -106,7 +101,7 @@ nav img{
     gap: 20px;
 }
 .one h1{
-    font-size:42px;
+    font-size:40px;
     text-transform: capitalize;
     font-family: Nunito;
     font-weight: 800;
@@ -132,6 +127,7 @@ nav img{
     font-size: 18px;
     font-family: Roboto slab;
     color: rgba(255, 255, 255, 0.627);
+    margin: 0;
 }
 .btn1{
     background-color: orange;
@@ -187,9 +183,68 @@ nav img{
     .one h1{
         font-size: 30px;
     }
+    .intro{
+        flex-direction: column-reverse;
+    }
+    .info{
+        gap: 25px;
+    }
 }
 @media (max-width:600px) {
     .one h1{
         font-size: 25px;
     }
+    .info{
+        gap: 12px;
+    }
+}
+
+ /* ----- Cards/items page ---  */
+
+ .products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.products h1{
+    font-size: 45px;
+    font-weight: 800;
+    font-family: Nunito;
+}
+.cards{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.item{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.cards i{
+    font-size: 35px;
+    background-color: orange;
+    padding: 15px 20px;
+    border-radius: 50%;
+}
+.item{
+    background-color: grey;
+    width: 75vw;
+    padding: 20px;
+}
+.box{
+    background-color: black;
+}
+.box img{
+    height: 150px;
+    width: 150px;
+    padding: 20px;
+}
+
+.item{
+    padding: 20px 50px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
 }
