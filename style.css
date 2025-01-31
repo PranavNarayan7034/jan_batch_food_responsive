@@ -1,127 +1,286 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Page</title>
-    <link rel="shortcut icon" href="food_logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
-<body class="bg-black">
-    <!-- Navbar -->
-    <nav>
-        <img src="food_logo.png" class="left">
-        <div class="center">
-            <a href="" class="text-white">Home</a>
-            <a href="" class="text-white">Services</a>
-            <a href="" class="text-white">Menu</a>
-            <a href="" class="text-white">Contact</a>
-        </div>
-        <div class="right">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <i class="fa-solid fa-cart-shopping"></i>
-            <button>Login</button>
-        </div>
-        <div class="bar">
-            <i class="fa-solid fa-bars-staggered"></i>
-        </div>
-    </nav>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Slab:wght@100..900&display=swap');
 
-    <!-- ----- intro page ----- -->
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+body{
+    background-color: black;
+}
 
-    <div class="intro">
-        <div class="one">
-            <h1>savor signature dishes every <br>time, with lightning-<span>fast delivery</span> <br> to your door step</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quasi molestias quidem consequuntur? Suscipit, qui? Sapiente dolorum eaque neque laborum? Recusandae nulla harum, sit necessitatibus vitae dolorem esse animi soluta.</p>
-            <div class="button">
-                <button class="btn1">get started</button>
-                <button class="btn2">
-                    <i class="fa-solid fa-circle-play"></i>
-                    how to order</button>
-            </div>
-            <div class="info">
-                <div class="child">
-                    <img src="badge.png" alt="">
-                    <p>350k reviews</p>
-                    <p>(4.8)</p>
-                </div>
-                <div class="line"></div>
-                <div class="child">
-                    <img src="burger.png" alt="">
-                    <p>8000+ Foods</p>
-                    <p>items</p>
-                </div>
-                <div class="line"></div>
-                <div class="child">
-                    <img src="reastuarent.png" alt="">
-                    <p>3000+</p>
-                    <p>restaurants</p>
-                </div>
-            </div>
-        </div>
-        <div class="two">
-            <img src="orangebrush.png" alt="" class="img1">
-            <img src="hero.png" alt="" class="img2">
-        </div>
-    </div>
+/* --- navbar style ---  */
+nav{
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    height: 100px;
+    z-index: 10;
+}
+nav img{
+    height: 130px;
+    width: 130px;
+}
+.center a{
+    font-size: 22px;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.right i{
+    font-size: 22px;
+    margin: 0 15px;
+}
+.right button{
+    background-color: transparent;
+    border: 2px solid white;
+    font-size: 20px;
+    padding: 8px 18px;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+.right button:hover{
+    background-color: white;
+    color: black;
+}
 
-    <!-- ---- Cards/items page----- -->
+.center a{
+    position: relative;
+}
+.center a::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 26px;
+    transition:0.5s;
+    border-radius: 10px;
+}
+.center a:hover::after{
+    width: 100%;
+}
 
-    <div class="products">
-        <h1>Our Hottest Dish</h1>
-        <div class="cards">
-            <i class="fa-solid fa-chevron-left lefticon"></i>
-            <div class="item">
-                <div class="box">
-                    <img src="pizza1.png" alt="">
-                    <h3>Papperoni Pizza</h3>
-                    <p>Fresh chicken</p>
-                    <div class="line"></div>
-                    <div class="new">
-                        <div class="rating">★★★★☆</div>
-                        <div class="price">₹300</div>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="pizza2.png" alt="">
-                    <h3>BBQ Pizza</h3>
-                    <p>Fresh chicken</p>
-                    <div class="line"></div>
-                    <div class="new">
-                        <div class="rating">★★★★☆</div>
-                        <div class="price">₹399</div>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="pizza3.png" alt="">
-                    <h3>Talian Pizza</h3>
-                    <p>Fresh chicken</p>
-                    <div class="line"></div>
-                    <div class="new">
-                        <div class="rating">★★★★☆</div>
-                        <div class="price">₹329</div>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="pizza4.png" alt="">
-                    <h3>Caprese Pizza</h3>
-                    <p>Fresh chicken</p>
-                    <div class="line"></div>
-                    <div class="new">
-                        <div class="rating">★★★☆☆</div>
-                        <div class="price">₹250</div>
-                    </div>
-                </div>
+.bar i{
+    font-size: 30px;
+}
+.bar{
+    display: none;
+}
 
-            </div>
-            <i class="fa-solid fa-chevron-right righticon"></i>
-        </div>
-    </div>
+@media (max-width:1000px) {
+    nav{
+        padding: 0 20px;
+    }
+}
+@media (max-width:750px){
+    .bar{
+        display: flex;
+    }
+    .center,.right{
+        display: none;
+    }
+}
 
+ /* ---- intro page ---- */
+ .intro{
+    display: flex;
+    padding: 30px 50px;
+}
+.one,.two{
+    height: 100%;
+    width: 100%;
+    /* border: 4px solid white; */
+}
+.one{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.one h1{
+    font-size:40px;
+    text-transform: capitalize;
+    font-family: Nunito;
+    font-weight: 800;
+}
+.one h1 span{
+    color: red;
+}
+.two{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.two .img1{
+    position: absolute;
+    z-index: 1;
+}
+.two .img2{
+    position: relative;
+    z-index: 2;
+}
+.one p{
+    font-size: 18px;
+    font-family: Roboto slab;
+    color: rgba(255, 255, 255, 0.627);
+    margin: 0;
+}
+.btn1{
+    background-color: orange;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: Nunito;
+    text-transform: capitalize;
+    border-radius: 0 25px 25px 25px;
+}
+.btn2{
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+.btn2 i{
+    font-size: 40px;
+    background:linear-gradient(to right,
+    orange 0 50% , transparent 50% 100%);
+    padding: 5px;
+    border-radius: 50%;
+}
+.button{
+    display: flex;
+    gap: 20px;
+}
 
+.info{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.child img{ 
+    height: 60px;
+    width: 60px;
+}
+.line{
+    width: 3px;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.304);
+}
 
-    <br><br><br><br><br><br><br><br>
-</body>
-</html>
+@media (max-width:1000px) {
+    .one h1{
+        font-size: 35px;
+    }
+}
+@media (max-width:800px) {
+    .one h1{
+        font-size: 30px;
+    }
+    .intro{
+        flex-direction: column-reverse;
+    }
+    .info{
+        gap: 25px;
+    }
+}
+@media (max-width:600px) {
+    .one h1{
+        font-size: 25px;
+    }
+    .info{
+        gap: 12px;
+    }
+}
+
+ /* ----- Cards/items page ---  */
+
+ .products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.products h1{
+    font-size: 45px;
+    font-weight: 800;
+    font-family: Nunito;
+}
+.cards{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.item{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.cards i{
+    font-size: 35px;
+    background-color: orange;
+    padding: 15px 20px;
+    border-radius: 50%;
+}
+.item{
+    background-color: rgba(128, 128, 128, 0.274);
+    width: 75vw;
+    padding: 20px;
+}
+.box{
+    background-color:rgba(128, 128, 128, 0.238);
+}
+.box img{
+    height: 150px;
+    width: 150px;
+    padding: 0px;
+}
+
+.item{
+    border-radius: 10px;
+    padding: 40px 50px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+.box{
+    padding: 25px;
+    width: 20%;
+    border-radius: 10px;
+}
+.lefticon{
+    position: relative;
+    left: 25px;
+    border: 15px solid black;
+}
+.righticon{
+    position: relative;
+    right: 25px;
+    border: 15px solid black;
+}
+.box h3{
+    font-size: 20px;
+    font-weight: 600;
+}
+.box p{
+    color: rgba(255, 255, 255, 0.508);
+}
+.box .line{
+    height: 2px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.352);
+}
+.new{
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+}
